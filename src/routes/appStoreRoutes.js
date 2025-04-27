@@ -1,7 +1,7 @@
 // src/routes/appStoreRoutes.js
 const express = require('express');
 const router = express.Router();
-const { getAppReviews } = require('../controllers/appStoreController');
+const { getAppReviews, getAppInfo } = require('../controllers/appStoreController');
 
 /**
  * @route   GET /api/reviews
@@ -9,5 +9,12 @@ const { getAppReviews } = require('../controllers/appStoreController');
  * @access  Public
  */
 router.get('/reviews', getAppReviews);
+
+/**
+ * @route   GET /api/app
+ * @desc    获取应用详细信息
+ * @access  Public
+ */
+router.get('/app', getAppInfo);
 
 module.exports = router;

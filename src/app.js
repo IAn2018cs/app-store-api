@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
         success: true,
         message: 'App Store API 服务正在运行',
         endpoints: {
+            appInfo: '/api/app',
             reviews: '/api/reviews'
         }
     });
